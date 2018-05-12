@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Home - Programming Database</title>
+{% endblock %}
+{% block body %}
+    {% for category in categories %}
+        <h2>{{ category.name}}</h2>
+        {% for item in category.item_set.all %}
+            <a href="{% url 'item' item_id=item.id %}">{{ item.name }}</a>
+        {% endfor %}
+    {% endfor %}
+    <!--{% for item in items %}-->
+    <!--<a href="{% url 'item' item_id=item.id %}">{{ item.name }}</a>-->
+    <!--{% endfor %}-->
+{% endblock %}

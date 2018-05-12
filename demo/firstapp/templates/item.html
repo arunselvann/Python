@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% if item != None %}
+    <title>{{item.name}} - Programming Database</title>
+    {% else %}
+    <title>Invalid Item- Programming Database</title>
+    {% endif %}
+{% endblock %}
+{% block body %}
+    <a href="{% url 'index' %}">&lt; Back</a>
+    {% if item != None %}
+    <h1>{{ item.name }}</h1>
+    <h4>{{ item.category.name}}</h4>
+    <p>{{ item.description }}</p>
+    {% else %}
+    <p>Invalid Item ID</p>
+    {% endif %}
+{% endblock %}
