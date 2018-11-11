@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Properties Check</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div class=container>
+        <h1>Informatica Properties Check<small> By Deloitte.</small></h1>
+        <div class="jumbotron">
+            <h3>Upload the XML file</h3>
+            <br/>
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="file" name="file"/>
+                    <br/>
+                    <input class="btn btn-default" type="submit" value="Generate" />
+                </form>
+            {% if file %}
+            <a href="{{OUTPUT}}" download> Download </a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
