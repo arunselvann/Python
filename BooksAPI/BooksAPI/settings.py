@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'BooksAPI',
         'USER': 'books',
-        'PASSWORD': 'Ar9&())*&@)*',
+        'PASSWORD': '***',
     }
 }
 
